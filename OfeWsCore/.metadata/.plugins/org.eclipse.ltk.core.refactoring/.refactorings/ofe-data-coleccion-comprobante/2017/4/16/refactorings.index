@@ -1,0 +1,27 @@
+1492024451436	Delete elements
+1492024489619	Rename type 'OfeDataColeccionComprobanteApplication'
+1492024500200	Delete element
+1492025404513	Rename type 'OfeServicioDataComprobante'
+1492026168034	Copy compilation unit
+1492026447112	Rename type 'RepositoryOfeDataColeccionComprobanteSec'
+1492027135860	Rename type 'ExcepcionMicroservicio'
+1492027142461	Rename type 'ExcepcionMicroservicioMongoDb'
+1492027160299	Rename type 'ExcepcionMicroservicioMongo'
+1492027503866	Rename local variable 'query'
+1492027515389	Rename local variable 'update'
+1492027534446	Rename local variable 'options'
+1492027547017	Rename local variable 'seqId'
+1492031087745	Rename type 'ServicioRegistroComprobanteFisico'
+1492032763091	Rename type 'OfeConfiguracion'
+1492032783818	Rename type 'OfeServicioRegistroComprobanteFisico'
+1492035871992	Copy compilation unit
+1492099226732	Copy compilation units
+1492099637844	Delete element
+1492103129587	Extract constant 'TAG_INVALIDO_XML'
+1492103147850	Rename field 'TAG_INVALIDO_XML'
+1492103168236	Extract constant 'FIN_TAG_INVALIDO_XML'
+1492103186998	Extract constant 'INICIO_TAG_VALIDO_XML'
+1492103202473	Extract constant 'FIN_TAG_VALIDO_XML'
+1492104150294	Rename local variable 'l'
+1492120888454	Copy compilation unit
+1492121017850	Delete element

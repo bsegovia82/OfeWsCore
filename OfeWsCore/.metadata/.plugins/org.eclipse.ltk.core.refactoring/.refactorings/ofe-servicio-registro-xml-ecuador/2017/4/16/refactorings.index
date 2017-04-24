@@ -1,0 +1,14 @@
+1492100236716	Delete element
+1492100252115	Delete element
+1492100259789	Rename package 'com.microservicio.ofe'
+1492100263556	Delete element
+1492100734940	Extract constant 'TAG_COD_DOC'
+1492100748415	Rename field 'TAG_COD_DOC'
+1492100766975	Extract constant 'TAG_FIN_COD_DOC'
+1492100953065	Extract constant 'TAG_INI_COD_DOC_GT'
+1492100970299	Extract constant 'TAG_FIN_COD_DOC_GT'
+1492167468966	Extract constant 'PATRON_CLAVE'
+1492167491371	Extract constant 'PATRON_VALOR'
+1492176928027	Rename resource 'dcoker'
+1492177053171	Copy file
+1492177072782	Delete element

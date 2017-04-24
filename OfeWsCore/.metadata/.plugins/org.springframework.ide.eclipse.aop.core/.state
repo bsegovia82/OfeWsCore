@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="ofe-libreria-modelo-data-comprobante"/>
+<aop-project name="ofe-data-coleccion-comprobante"/>
+<aop-project name="ofe-servicio-registro-xml-ecuador"/>
+</aop-reference-model>

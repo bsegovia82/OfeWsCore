@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.producto.comprobanteselectronicos</groupId>
+		<artifactId>comprobantes-electronicos</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<groupId>com.producto.comprobanteselectronicos.conector.remoto</groupId>
+	<artifactId>comprobantes-electronicos-conector-remoto</artifactId>
+	<version>1.0</version>
+	<packaging>ejb</packaging>
+
+	<name>comprobantes-electronicos-conector-remoto</name>
+
+	<properties>
+		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jboss.spec</groupId>
+			<artifactId>jboss-javaee-6.0</artifactId>
+			<version>1.0.0.Final</version>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-discovery</groupId>
+			<artifactId>commons-discovery</artifactId>
+			<version>0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.producto.comprobanteselectronicos.modelo.procesador</groupId>
+			<artifactId>comprobantes-electronicos-modelo-procesador</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.producto.comprobanteselectronicos.modelo.parametros</groupId>
+			<artifactId>comprobantes-electronicos-modelo-parametros</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.producto.comprobanteselectronicos.utilerias</groupId>
+			<artifactId>comprobantes-electronicos-utilerias</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.producto.comprobanteselectronicos.comprobador</groupId>
+			<artifactId>comprobantes-electronicos-comprobador</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.producto.comprobanteselectronicos.autorizador</groupId>
+			<artifactId>comprobantes-electronicos-autorizador</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.producto.comprobanteselectronicos.extractor.datos</groupId>
+			<artifactId>comprobantes-electronicos-extractor-datos</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+	</dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<ejbVersion>3.1</ejbVersion>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.1</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${endorsed.dir}</outputDirectory>
+							<silent>true</silent>
+							<artifactItems>
+								<artifactItem>
+									<groupId>javax</groupId>
+									<artifactId>javaee-endorsed-api</artifactId>
+									<version>6.0</version>
+									<type>jar</type>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ofe.data</groupId>
+	<artifactId>ofe-data-coleccion-comprobante</artifactId>
+	<version>7</version>
+	<packaging>jar</packaging>
+
+	<name>ofe-data-coleccion-comprobante</name>
+	<description>ofe-data-coleccion-comprobante</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<lombok.version>1.14.8</lombok.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ofe.libreria</groupId>
+			<artifactId>ofe-libreria-modelo-data-comprobante</artifactId>
+			<version>7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ofe.libreria</groupId>
+			<artifactId>ofe-libreria-driver-servicio</artifactId>
+			<version>7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ofe.servicios</groupId>
+			<artifactId>ofe-servicio-registro-xml-ecuador</artifactId>
+			<version>7</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.13</version>
+				<configuration>
+					<imageName>prueba/ejecucion</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<dockerHost>https://192.168.99.100:2376</dockerHost>
+					<dockerCertPath>/Users/BYRON/.docker/machine/machines/default</dockerCertPath>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+
+
+</project>
